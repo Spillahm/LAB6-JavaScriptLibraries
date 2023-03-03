@@ -1,4 +1,4 @@
-let usaAreaCenterCoordinates =[39.82,98.58]
+let usaAreaCenterCoordinates =[39.82,-98.58]
 let zoomLevel = 6
 
 let map= L.map('bridgespans-maps').setView(usaAreaCenterCoordinates, zoomLevel)
@@ -65,7 +65,7 @@ for (var i = 0; i < data.length; i++) {
 
 
     // Creating a  popup
-    var popup = L.popup().setContent(data[i].description);
+    var popup = L.popup().setContent(data[i].description +data[i].span);
 
     // Add popup to marker
     marker.bindPopup(popup);
